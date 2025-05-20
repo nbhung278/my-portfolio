@@ -127,14 +127,14 @@ const Projects = () => {
         >
           {projects.map((project) => (
             <SwiperSlide key={project.name}>
-              <div className="bg-black/60 rounded-xl p-6 shadow border border-gray-800 flex flex-col gap-3 group hover:scale-[1.03] transition-transform h-[450px]">
+              <div className="bg-black/60 rounded-xl p-6 shadow border border-gray-800 flex flex-col gap-3 group hover:scale-[1.03] transition-transform h-[450px] relative">
                 <div
-                  className="w-full h-48 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center"
+                  className="w-full h-48 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center relative"
                   onClick={() => {
                     window.open(project.link, "_blank");
                   }}
                 >
-                  <BlurFade className="w-full h-full">
+                  <BlurFade className="w-full h-full relative">
                     <Image
                       src={project.url}
                       alt={project.name}
@@ -142,6 +142,7 @@ const Projects = () => {
                       className="object-cover cursor-pointer"
                       quality={75}
                       loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </BlurFade>
                 </div>

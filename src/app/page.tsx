@@ -8,41 +8,84 @@ import {
 	SiNextdotjs,
 	SiMui,
 	SiTailwindcss,
-	SiSanity,
 	SiNestjs,
-	SiExpress,
-	SiServerless,
-	SiApollographql,
 	SiGraphql,
 	SiShopify,
 	SiSpring,
 	SiMysql,
 	SiPostgresql,
 	SiRedux,
-	SiAuth0,
 	SiPrisma,
 	SiDocker,
 	SiJest,
 } from "react-icons/si";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const projects = [
 	{
+		name: "EMSO Social Network",
+		description:
+			"A social networking platform for Vietnamese users, featuring chat, livestream, e-commerce, investment, and more. Developed marketplace modules, integrated payment systems, and maintained frontend using ReactJS, Redux, Material UI, and Firebase.",
+		link: "https://cmc-fe.emso.vn/",
+		tags: ["ReactJS", "Redux", "Material UI", "Firebase", "SocketIO"],
+	},
+	{
+		name: "EasyEdu Management System",
+		description:
+			"A comprehensive management solution for foreign language centers, built with a microservice architecture. Responsible for developing new features, improving UI/UX, and fixing bugs. Tech stack includes ReactJS, Redux, Firebase, and Material UI.",
+		link: "https://easyedu.vn/",
+		tags: ["ReactJS", "Redux", "Firebase", "Material UI"],
+	},
+	{
+		name: "Whale Social Network (Personal Project)",
+		description:
+			"A livestream and social network app inspired by modern social platforms. Fullstack development using NestJS, GraphQL, Prisma, Docker, NextJS, Zustand, and SocketIO. Includes real-time features and code management via Github.",
+		link: "https://github.com/nbhung278/Whale-SN-Client",
+		tags: ["NestJS", "NextJS", "GraphQL", "Prisma", "SocketIO"],
+	},
+	{
+		name: "Viettrade Homepage",
+		description:
+			"Official website for the Trade Promotion Department of the Ministry of Industry and Trade. Developed and maintained features using Bootstrap, Ajax, jQuery, and Laravel.",
+		link: "https://viettrade.gov.vn/",
+		tags: ["Laravel", "Bootstrap", "jQuery"],
+	},
+	{
+		name: "iTrace 247",
+		description:
+			"A platform for retrieving product information, including origin, certification, and traceability. Contributed to both backend and frontend development, focusing on customer-requested features and bug fixes.",
+		link: "https://itrace247.com/",
+		tags: ["Laravel", "Bootstrap", "jQuery"],
+	},
+	{
+		name: "MOLISA Feedback System",
+		description:
+			"A feedback and recommendation system for the Ministry of Labor, War Invalids, and Social Affairs. Developed backend features and maintained the system using Laravel and Bootstrap.",
+		link: "https://www.molisa.gov.vn/",
+		tags: ["Laravel", "Bootstrap", "jQuery"],
+	},
+	// Showcase portfolio and animation projects as well
+	{
 		name: "Vite Portfolio Clone",
 		description:
-			"Portfolio inspired by Vite, Next.js, Tailwind, and Framer Motion.",
+			"A portfolio website inspired by Vite, built with Next.js, Tailwind CSS, and Framer Motion for smooth animations.",
 		link: "https://github.com/hungnbdev/vite-portfolio-clone",
 		tags: ["Next.js", "Tailwind", "Framer Motion"],
 	},
 	{
 		name: "Realtime Chat App",
 		description:
-			"Real-time chat application with socket.io, Next.js, and Tailwind.",
+			"A real-time chat application using Socket.io, Next.js, and Tailwind CSS.",
 		link: "https://github.com/hungnbdev/realtime-chat-app",
 		tags: ["Next.js", "Socket.io", "Tailwind"],
 	},
 	{
 		name: "Landing Page Animations",
-		description: "Landing page with beautiful dynamic effects.",
+		description:
+			"A landing page featuring beautiful and modern animation effects.",
 		link: "https://github.com/hungnbdev/landing-animations",
 		tags: ["React", "Framer Motion", "UI"],
 	},
@@ -50,52 +93,56 @@ const projects = [
 
 const timeline = [
 	{
-		year: "2024 - Present",
-		company: "Awesome Tech",
-		role: "Frontend Engineer",
+		year: "6/2023 - Now",
+		company: "EMSO Vietnam JSC",
+		role: "Frontend Developer",
 		description:
-			"Developing UI/UX for SaaS products, optimizing performance and user experience.",
+			"EMSO SOCIAL NETWORK: Social networking site for Vietnamese people (chat, livestream, e-commerce, investment, etc.). Tech: ReactJS, Redux, Redux Saga, Material UI, Firebase, Typescript, SocketIO. Role: Maintain marketplace module, integrate payments.",
 		color: "from-purple-500 to-indigo-500",
 	},
 	{
-		year: "2022 - 2024",
-		company: "Creative Studio",
-		role: "Web Developer",
+		year: "3/2023 - Now",
+		company: "EASYEDU",
+		role: "Frontend Developer",
 		description:
-			"Designing and building websites for business clients using Next.js and Tailwind.",
+			"Management solutions for foreign language centers (microservice architecture). Tech: Drupal (backend), ReactJS (frontend), Firebase, Github, Axios, Redux, Material UI. Role: Develop new features, UI/UX, fix bugs.",
 		color: "from-pink-500 to-purple-500",
 	},
 	{
-		year: "2020 - 2022",
-		company: "Startup XYZ",
-		role: "Frontend Intern",
+		year: "12/2023 - Now",
+		company: "Personal Project: Whale Social Network",
+		role: "Fullstack Developer",
 		description:
-			"Participated in startup project development, learning about React and Agile processes.",
+			"Livestream and social network app (NestJS, GraphQL, Prisma, Docker, NextJS, Typescript, Zustand, Shadcn, SocketIO). Role: Fullstack, repo: github.com/nbhung278/Whale-SN-Client & Whale-SN-Server.",
 		color: "from-indigo-500 to-blue-500",
+	},
+	{
+		year: "11/2022 - 3/2023",
+		company: "CSSOFT JSC",
+		role: "Backend/Frontend Developer",
+		description:
+			"VIETTRADE HOMEPAGE: Software for Trade Promotion Department. ITRACE 247: Product information retrieval software. MOLISA: Feedback and recommendations software for Ministry of Labor. Tech: Bootstrap, Ajax, jQuery, Laravel 8.x. Role: Develop features, fix bugs, test projects.",
+		color: "from-green-500 to-blue-500",
 	},
 ];
 
 const technologies = [
 	{ icon: SiTypescript, color: "#3178c6", name: "TypeScript" },
-	{ icon: SiReact, color: "#61dafb", name: "React" },
-	{ icon: SiNextdotjs, color: "#fff", name: "Next.js" },
-	{ icon: SiMui, color: "#007fff", name: "MUI" },
-	{ icon: SiTailwindcss, color: "#38bdf8", name: "Tailwind" },
-	{ icon: SiSanity, color: "#f03e2f", name: "Sanity" },
+	{ icon: SiReact, color: "#61dafb", name: "ReactJS" },
+	{ icon: SiNextdotjs, color: "#fff", name: "NextJS" },
 	{ icon: SiNestjs, color: "#ea2845", name: "NestJS" },
-	{ icon: SiExpress, color: "#fff", name: "Express" },
-	{ icon: SiServerless, color: "#4f46e5", name: "Serverless" },
-	{ icon: SiApollographql, color: "#311c87", name: "Apollo" },
+	{ icon: SiMui, color: "#007fff", name: "Material UI" },
+	{ icon: SiTailwindcss, color: "#38bdf8", name: "TailwindCSS" },
 	{ icon: SiGraphql, color: "#e535ab", name: "GraphQL" },
-	{ icon: SiShopify, color: "#96bf48", name: "Shopify" },
-	{ icon: SiSpring, color: "#f58220", name: "Spring" },
-	{ icon: SiMysql, color: "#00758f", name: "MySQL" },
-	{ icon: SiPostgresql, color: "#336791", name: "PostgreSQL" },
 	{ icon: SiRedux, color: "#ed1c24", name: "Redux" },
-	{ icon: SiAuth0, color: "#eb5424", name: "Auth0" },
+	{ icon: SiSpring, color: "#f58220", name: "RESTful API" },
+	{ icon: SiPostgresql, color: "#336791", name: "PostgreSQL" },
 	{ icon: SiPrisma, color: "#0c344b", name: "Prisma" },
 	{ icon: SiDocker, color: "#2496ed", name: "Docker" },
-	{ icon: SiJest, color: "#c21325", name: "Jest" },
+	{ icon: SiMysql, color: "#00758f", name: "MongoDB" },
+	{ icon: SiJest, color: "#c21325", name: "Firebase Firestore" },
+	{ icon: SiShopify, color: "#96bf48", name: "Shopify" },
+	// Add more as needed
 ];
 
 const sections = [
@@ -115,15 +162,12 @@ const sections = [
 						Full Stack Developer
 					</h1>
 					<p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-						I&apos;m a Full Stack Developer with over 3 years of experience,
-						including 1.5 years in Backend Development (Laravel) and 2+ years in
-						Frontend Development (ReactJS). I possess strong expertise in
-						Architecture Design, UX/UI, and Design Patterns. Throughout my
-						career, I have actively contributed to numerous projects,
-						continuously enhancing my skills and professional growth. I am
-						passionate about learning and eager to collaborate with experienced
-						mentors who can help me further develop my expertise. My goal is to
-						become an exceptional full-stack web developer.
+						I&apos;m a web developer with more than 3 years of experience (1.5
+						years Backend - Laravel, 2+ years Frontend - ReactJS). Good
+						knowledge of Architecture Design, UX/UI, and Design Patterns.
+						Participated in many projects, continuously improving my skills.
+						Looking forward to meeting enthusiastic mentors. My goal is to
+						become a full-stack website developer.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<a
@@ -167,46 +211,76 @@ const sections = [
 	{
 		id: "projects",
 		className:
-			"py-20 flex flex-col items-center bg-gradient-to-b from-[#18122b] to-[#0a0a0a]",
+			"py-20 flex flex-col items-center bg-gradient-to-b from-[#18122b] to-[#0a0a0a] w-full",
 		content: (
 			<SectionInView>
 				<h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
 					Projects
 				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-					{projects.map((project, i) => (
-						<motion.a
-							key={project.name}
-							href={project.link}
-							target="_blank"
-							rel="noopener"
-							initial={{ opacity: 0, y: 40 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ delay: i * 0.1, duration: 0.6, type: "spring" }}
-							className="bg-black/60 rounded-xl p-6 shadow border border-gray-800 hover:scale-105 transition-transform flex flex-col gap-3 group"
-						>
-							<div className="flex items-center gap-2 mb-2">
-								<span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 block" />
-								<span className="font-semibold text-lg text-gray-100 group-hover:text-purple-300 transition-colors">
-									{project.name}
-								</span>
-							</div>
-							<p className="text-gray-300 text-sm mb-2">
-								{project.description}
-							</p>
-							<div className="flex flex-wrap gap-2 mt-auto">
-								{project.tags.map((tag) => (
-									<span
-										key={tag}
-										className="px-2 py-0.5 rounded bg-gradient-to-r from-purple-700 to-indigo-700 text-xs text-white font-mono"
-									>
-										{tag}
-									</span>
-								))}
-							</div>
-						</motion.a>
-					))}
+				<div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-2 sm:px-8">
+					<Swiper
+						modules={[Autoplay, Pagination]}
+						spaceBetween={24}
+						slidesPerView={1}
+						breakpoints={{
+							640: { slidesPerView: 1 },
+							768: { slidesPerView: 2 },
+							1280: { slidesPerView: 3 },
+							1536: { slidesPerView: 4 },
+							1920: { slidesPerView: 5 },
+						}}
+						loop={true}
+						autoplay={{
+							delay: 1,
+							disableOnInteraction: false,
+							pauseOnMouseEnter: true,
+						}}
+						freeMode={true}
+						speed={4000}
+						allowTouchMove={true}
+						pagination={false}
+						className="project-swiper"
+					>
+						{projects.map((project) => (
+							<SwiperSlide key={project.name}>
+								<div className="bg-black/60 rounded-xl p-6 shadow border border-gray-800 flex flex-col gap-3 group hover:scale-[1.03] transition-transform max-w-xl mx-auto min-h-[370px] h-[370px] md:min-h-[400px] md:h-[400px]">
+									<div className="w-full h-40 mb-3 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center">
+										<Image
+											src="/project-placeholder.png"
+											alt={project.name}
+											width={320}
+											height={160}
+											className="object-cover w-full h-full"
+										/>
+									</div>
+									<div className="flex items-center gap-2 mb-2">
+										<span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 block" />
+										<a
+											href={project.link}
+											target="_blank"
+											rel="noopener"
+											className="font-semibold text-lg text-gray-100 group-hover:text-purple-300 transition-colors hover:underline"
+										>
+											{project.name}
+										</a>
+									</div>
+									<p className="text-gray-300 text-sm mb-2 line-clamp-4">
+										{project.description}
+									</p>
+									<div className="flex flex-wrap gap-2 mt-auto">
+										{project.tags.map((tag) => (
+											<span
+												key={tag}
+												className="px-2 py-0.5 rounded bg-gradient-to-r from-purple-700 to-indigo-700 text-xs text-white font-mono"
+											>
+												{tag}
+											</span>
+										))}
+									</div>
+								</div>
+							</SwiperSlide>
+						))}
+					</Swiper>
 				</div>
 			</SectionInView>
 		),
@@ -229,14 +303,14 @@ const sections = [
 								whileInView={{ opacity: 1, x: 0 }}
 								viewport={{ once: true }}
 								transition={{ delay: i * 0.1, duration: 0.7, type: "spring" }}
-								className={`flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 ${
+								className={`flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-8 ${
 									i % 2 === 0 ? "md:flex-row-reverse" : ""
 								}`}
 							>
-								<div
-									className={`flex-shrink-0 w-24 h-24 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg text-white font-bold text-lg border-4 border-[#18122b]`}
-								>
-									{item.year}
+								<div className="flex flex-col items-center md:items-start">
+									<span className="text-xs md:text-sm text-gray-400 font-semibold mb-1">
+										{item.year}
+									</span>
 								</div>
 								<div className="flex-1 bg-black/70 rounded-xl p-6 shadow border border-gray-800">
 									<div className="font-semibold text-xl text-purple-300 mb-1">
@@ -367,6 +441,33 @@ const sections = [
 						Contact Now
 					</a>
 				</motion.div>
+			</SectionInView>
+		),
+	},
+	{
+		id: "education",
+		className: "py-20 flex flex-col items-center bg-black/80",
+		content: (
+			<SectionInView>
+				<h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
+					Education
+				</h2>
+				<div className="max-w-2xl mx-auto bg-black/70 rounded-xl p-6 shadow border border-gray-800">
+					<div className="font-semibold text-xl text-purple-300 mb-1">
+						ELECTRIC POWER UNIVERSITY
+					</div>
+					<div className="text-sm text-indigo-300 mb-2">08/2018 - 03/2023</div>
+					<div className="text-gray-300 text-sm mb-2">
+						Information Technology, majoring in E-commerce.
+					</div>
+					<ul className="list-disc pl-5 text-gray-300 text-sm">
+						<li>
+							Achieved good results in specialized IT subjects (database, web
+							programming).
+						</li>
+						<li>B2 foreign language certificate.</li>
+					</ul>
+				</div>
 			</SectionInView>
 		),
 	},

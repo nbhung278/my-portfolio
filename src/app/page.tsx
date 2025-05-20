@@ -176,25 +176,6 @@ const sections = [
 						</a>
 					</div>
 				</motion.div>
-				<motion.div
-					initial={{ opacity: 0, scale: 0.8 }}
-					animate={{ opacity: 1, scale: 1 }}
-					transition={{ delay: 0.5, duration: 0.8 }}
-					className="mt-8 flex justify-center"
-				>
-					<div className="bg-gradient-to-br from-purple-800/60 to-indigo-900/80 p-6 rounded-2xl shadow-xl flex flex-col items-center">
-						<Image
-							src="/next.svg"
-							alt="Vite Logo"
-							width={80}
-							height={80}
-							className="mb-2"
-						/>
-						<span className="text-xs text-gray-400">
-							Powered by Next.js & Tailwind CSS
-						</span>
-					</div>
-				</motion.div>
 			</>
 		),
 	},
@@ -362,6 +343,33 @@ const sections = [
 		),
 	},
 	{
+		id: "education",
+		className: "py-20 flex flex-col items-center bg-black/80",
+		content: (
+			<SectionInView>
+				<h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
+					Education
+				</h2>
+				<div className="max-w-2xl mx-auto bg-black/70 rounded-xl p-6 shadow border border-gray-800">
+					<div className="font-semibold text-xl text-purple-300 mb-1">
+						ELECTRIC POWER UNIVERSITY
+					</div>
+					<div className="text-sm text-indigo-300 mb-2">08/2018 - 03/2023</div>
+					<div className="text-gray-300 text-sm mb-2">
+						Information Technology, majoring in E-commerce.
+					</div>
+					<ul className="list-disc pl-5 text-gray-300 text-sm">
+						<li>
+							Achieved good results in specialized IT subjects (database, web
+							programming).
+						</li>
+						<li>B2 foreign language certificate.</li>
+					</ul>
+				</div>
+			</SectionInView>
+		),
+	},
+	{
 		id: "community",
 		className:
 			"py-20 flex flex-col items-center bg-gradient-to-b from-black/80 to-gray-900/90",
@@ -431,33 +439,6 @@ const sections = [
 						Contact Now
 					</a>
 				</motion.div>
-			</SectionInView>
-		),
-	},
-	{
-		id: "education",
-		className: "py-20 flex flex-col items-center bg-black/80",
-		content: (
-			<SectionInView>
-				<h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
-					Education
-				</h2>
-				<div className="max-w-2xl mx-auto bg-black/70 rounded-xl p-6 shadow border border-gray-800">
-					<div className="font-semibold text-xl text-purple-300 mb-1">
-						ELECTRIC POWER UNIVERSITY
-					</div>
-					<div className="text-sm text-indigo-300 mb-2">08/2018 - 03/2023</div>
-					<div className="text-gray-300 text-sm mb-2">
-						Information Technology, majoring in E-commerce.
-					</div>
-					<ul className="list-disc pl-5 text-gray-300 text-sm">
-						<li>
-							Achieved good results in specialized IT subjects (database, web
-							programming).
-						</li>
-						<li>B2 foreign language certificate.</li>
-					</ul>
-				</div>
 			</SectionInView>
 		),
 	},

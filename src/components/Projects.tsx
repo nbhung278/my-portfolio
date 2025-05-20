@@ -9,6 +9,7 @@ import whale from "@/assets/images/save-sea-whales-banner-paper-cut-whale-silhou
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
+import { BlurFade } from "./magicui/blur-fade";
 
 const projects = [
   {
@@ -85,13 +86,15 @@ const Projects = () => {
             <SwiperSlide key={project.name}>
               <div className="bg-black/60 rounded-xl p-6 shadow border border-gray-800 flex flex-col gap-3 group hover:scale-[1.03] transition-transform h-[450px]">
                 <div className="w-full h-48 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center">
-                  <Image
-                    src={project.url}
-                    alt={project.name}
-                    width={320}
-                    height={160}
-                    className="object-cover w-full h-48"
-                  />
+                  <BlurFade>
+                    <Image
+                      src={project.url}
+                      alt={project.name}
+                      width={320}
+                      height={160}
+                      className="object-cover w-full h-48"
+                    />
+                  </BlurFade>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 block" />

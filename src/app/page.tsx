@@ -11,6 +11,8 @@ import Education from "@/components/Education";
 import Information from "@/components/Information";
 import Contact from "@/components/Contact";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { DotPattern } from "@/components/magicui/dot-pattern";
+import { cn } from "@/lib/utils";
 
 const sections = [
   {
@@ -94,6 +96,17 @@ function SectionInView({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-[#1a1333] via-[#18122b] to-[#0a0a0a] min-h-screen w-full text-white font-sans scroll-smooth">
+      <DotPattern
+        width={30}
+        height={30}
+        cx={1}
+        cy={1}
+        cr={1}
+        className={cn(
+          "[mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)] "
+        )}
+      />
+
       <header className="w-full flex items-center justify-between px-4 py-4 md:px-12 z-20 relative">
         <div className="flex items-center gap-2">
           <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">

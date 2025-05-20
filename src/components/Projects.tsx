@@ -134,13 +134,14 @@ const Projects = () => {
                     window.open(project.link, "_blank");
                   }}
                 >
-                  <BlurFade>
+                  <BlurFade className="w-full h-full">
                     <Image
                       src={project.url}
                       alt={project.name}
-                      width={320}
-                      height={160}
-                      className="object-cover w-full h-48 cursor-pointer"
+                      fill
+                      className="object-cover cursor-pointer"
+                      quality={75}
+                      loading="lazy"
                     />
                   </BlurFade>
                 </div>

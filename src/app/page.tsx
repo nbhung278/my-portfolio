@@ -10,6 +10,7 @@ import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import Information from "@/components/Information";
 import Contact from "@/components/Contact";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const sections = [
   {
@@ -55,44 +56,6 @@ const sections = [
       </SectionInView>
     ),
   },
-  //   {
-  //     id: "community",
-  //     className:
-  //       "py-20 flex flex-col items-center bg-gradient-to-b from-black/80 to-gray-900/90",
-  //     content: (
-  //       <SectionInView>
-  //         <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
-  //           Loved by the community
-  //         </h2>
-  //         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-  //           {[1, 2, 3].map((i) => (
-  //             <motion.div
-  //               key={i}
-  //               initial={{ opacity: 0, y: 30 }}
-  //               whileInView={{ opacity: 1, y: 0 }}
-  //               viewport={{ once: true }}
-  //               transition={{ delay: i * 0.1, duration: 0.5 }}
-  //               className="bg-black/60 rounded-xl p-6 shadow border border-gray-800"
-  //             >
-  //               <p className="text-gray-300 mb-4">
-  //                 &quot;Hung is a very enthusiastic developer, his products are
-  //                 always polished and creative.&quot;
-  //               </p>
-  //               <div className="flex items-center gap-3">
-  //                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-700 to-indigo-700" />
-  //                 <div>
-  //                   <div className="font-semibold text-gray-200">
-  //                     Dev Reviewer {i}
-  //                   </div>
-  //                   <div className="text-xs text-gray-400">@reviewer{i}</div>
-  //                 </div>
-  //               </div>
-  //             </motion.div>
-  //           ))}
-  //         </div>
-  //       </SectionInView>
-  //     ),
-  //   },
   {
     id: "cta",
     className: "py-20 flex flex-col items-center justify-center bg-black/90",
@@ -137,20 +100,39 @@ export default function Home() {
             Hung Nguyen
           </span>
         </div>
-        <nav className="hidden md:flex gap-8 text-sm">
-          <a href="#hero" className="hover:underline">
-            Home
-          </a>
-          <a href="#projects" className="hover:underline">
-            Projects
-          </a>
-          <a href="#community" className="hover:underline">
-            Community
-          </a>
-          <a href="#cta" className="hover:underline">
-            Contact
-          </a>
-        </nav>
+        <div className="flex items-center gap-6">
+          <nav className="hidden md:flex gap-8 text-sm">
+            <a href="#hero" className="hover:underline">
+              Home
+            </a>
+            <a href="#projects" className="hover:underline">
+              Projects
+            </a>
+            <a href="#cta" className="hover:underline">
+              Contact
+            </a>
+          </nav>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/nbhung278"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors duration-300"
+              aria-label="GitHub Profile"
+            >
+              <FaGithub className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/h%C6%B0ng-nguy%E1%BB%85n-334b13253/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors duration-300"
+              aria-label="LinkedIn Profile"
+            >
+              <FaLinkedin className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
       </header>
       <main>
         {sections.map((section) => (

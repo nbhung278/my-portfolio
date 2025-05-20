@@ -47,7 +47,7 @@ const timeline = [
 const Timeline = () => {
   return (
     <>
-      <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
+      <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 text-white bg-clip-text text-transparent">
         Timeline
       </h2>
       <div className="relative max-w-3xl mx-auto">
@@ -65,12 +65,12 @@ const Timeline = () => {
               }`}
             >
               <div className="flex flex-col items-center md:items-start">
-                <span className="text-xs md:text-sm text-gray-400 font-semibold mb-1">
+                <span className="text-xs md:text-sm text-gray-500 font-semibold mb-1">
                   {item.year}
                 </span>
               </div>
               <div className="flex-1 bg-black/70 rounded-xl p-6 shadow border border-gray-800">
-                <div className="font-semibold text-xl text-purple-300 mb-1">
+                <div className="font-semibold text-xl text-white mb-1">
                   {item.company}
                 </div>
                 <div className="text-sm text-indigo-300 mb-2">{item.role}</div>

@@ -14,7 +14,7 @@ const projects = [
   {
     name: "Insida app",
     description:
-      "Official website for the Trade Promotion Department of the Ministry of Industry and Trade. Developed and maintained features using Bootstrap, Ajax, jQuery, and Laravel.",
+      "Insida is a web-based social networking app focused on real estate, primarily in Australia. It connects buyers and sellers directly, making property transactions faster and more transparent. Users can chat in real-time, negotiate prices, and access detailed property information — including exact location, number of rooms, land size, and more — all in one place",
     link: "https://viettrade.gov.vn/",
     url: insida,
     tags: ["NextJS", "TailwindCSS", "Shadcn"],
@@ -56,10 +56,8 @@ const projects = [
 const Projects = () => {
   return (
     <>
-      <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
-        Projects
-      </h2>
-      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-2 sm:px-8">
+      <h2 className="section-title">Projects</h2>
+      <div className="w-full overflow-hidden px-4 md:px-8">
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={24}
@@ -78,7 +76,7 @@ const Projects = () => {
             pauseOnMouseEnter: true,
           }}
           freeMode={true}
-          speed={4000}
+          speed={3500}
           allowTouchMove={true}
           pagination={false}
           className="project-swiper"

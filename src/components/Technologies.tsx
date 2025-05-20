@@ -130,7 +130,7 @@ const Technologies = () => {
   return (
     <div>
       {" "}
-      <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
+      <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 text-white bg-clip-text text-transparent">
         Technologies
       </h2>
       <div className="grid grid-cols-3 sm:grid-cols-5 gap-6 max-w-4xl mx-auto">

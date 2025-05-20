@@ -27,7 +27,7 @@ import easyEdu from "@/assets/images/easyEdu.png";
 import emsoSocial from "@/assets/images/emsoSocial.png";
 import chatty from "@/assets/images/chatty.webp";
 import insida from "@/assets/images/insida.webp";
-import landing from "@/assets/images/landing.avif";
+// import landing from "@/assets/images/landing.avif";
 import whale from "@/assets/images/save-sea-whales-banner-paper-cut-whale-silhouette-with-underwater-landscape-vector-eco-poster-undersea-environment-sealife-ecosystem-protection-poster-save-sea-whales-papercut-layers_8071-55568.avif";
 
 const projects = [
@@ -71,14 +71,14 @@ const projects = [
 		url: chatty,
 		tags: ["Next.js", "Socket.io", "Tailwind"],
 	},
-	{
-		name: "Landing Page Animations",
-		description:
-			"A landing page featuring beautiful and modern animation effects.",
-		link: "https://github.com/hungnbdev/landing-animations",
-		url: landing,
-		tags: ["React", "Framer Motion", "UI"],
-	},
+	// {
+	// 	name: "Landing Page Animations",
+	// 	description:
+	// 		"A landing page featuring beautiful and modern animation effects.",
+	// 	link: "https://github.com/hungnbdev/landing-animations",
+	// 	url: landing,
+	// 	tags: ["React", "Framer Motion", "UI"],
+	// },
 ];
 
 const timeline = [

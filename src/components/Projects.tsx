@@ -16,41 +16,84 @@ const projects = [
     name: "Insida app",
     description:
       "Insida is a web-based social networking app focused on real estate, primarily in Australia. It connects buyers and sellers directly, making property transactions faster and more transparent. Users can chat in real-time, negotiate prices, and access detailed property information — including exact location, number of rooms, land size, and more — all in one place",
-    link: "https://viettrade.gov.vn/",
+    link: "https://insidaapp.com/en",
     url: insida,
-    tags: ["NextJS", "TailwindCSS", "Shadcn"],
+    tags: [
+      "Next.js",
+      "Node.js",
+      "SCSS",
+      "AWS",
+      "Redis",
+      "Pub/Sub",
+      "MongoDB",
+      "MUI",
+    ],
+  },
+  {
+    name: "Chatty",
+    description:
+      "Support that grows with your business: Live chat, AI chatbot, Messenger chat, FAQs and help center.",
+    link: "https://apps.shopify.com/chatty",
+    url: chatty,
+    tags: [
+      "React",
+      "Node.js",
+      "AI assistant",
+      "Google cloud",
+      "Shopify",
+      "Redux",
+      "Redis",
+    ],
   },
   {
     name: "EMSO Social Network",
     description:
-      "A social networking platform for Vietnamese users, featuring chat, livestream, e-commerce, investment, and more. Developed marketplace modules, integrated payment systems, and maintained frontend using ReactJS, Redux, Material UI, and Firebase.",
-    link: "https://cmc-fe.emso.vn/",
+      "A social networking platform for Vietnamese users, featuring chat, livestream, e-commerce, investment, and more. Developed marketplace modules, integrated payment systems, and maintained frontend using React, Redux, Material UI, and Firebase.",
+    link: "https://emso.vn/",
     url: emsoSocial,
-    tags: ["ReactJS", "Redux", "Material UI", "Firebase", "SocketIO"],
+    tags: [
+      "React",
+      "Redux",
+      "Material UI",
+      "Firebase",
+      "SocketIO",
+      "AWS",
+      "Google cloud",
+    ],
   },
   {
     name: "EasyEdu Management System",
     description:
-      "A comprehensive management solution for foreign language centers, built with a microservice architecture. Responsible for developing new features, improving UI/UX, and fixing bugs. Tech stack includes ReactJS, Redux, Firebase, and Material UI.",
+      "A comprehensive management solution for foreign language centers, built with a microservice architecture. Responsible for developing new features, improving UI/UX, and fixing bugs. Tech stack includes React, Redux, Firebase, and Material UI.",
     url: easyEdu,
     link: "https://easyedu.vn/",
-    tags: ["ReactJS", "Redux", "Firebase", "Material UI"],
+    tags: [
+      "React",
+      "Redux",
+      "Firebase",
+      "Material UI",
+      "Redis",
+      "Pub/Sub",
+      "Docker",
+      "AWS",
+    ],
   },
   {
     name: "Whale Social Network (Personal Project)",
     description:
-      "A livestream and social network app inspired by modern social platforms. Fullstack development using NestJS, GraphQL, Prisma, Docker, NextJS, Zustand, and SocketIO. Includes real-time features and code management via Github.",
+      "A livestream and social network app inspired by modern social platforms. Fullstack development using NestJS, GraphQL, Prisma, Docker, Next.js, Zustand, and SocketIO. Includes real-time features and code management via Github.",
     link: "https://github.com/nbhung278/Whale-SN-Client",
     url: whale,
-    tags: ["NestJS", "NextJS", "GraphQL", "Prisma", "SocketIO"],
-  },
-  {
-    name: "Realtime Chat App",
-    description:
-      "A real-time chat application using Socket.io, Next.js, and Tailwind CSS.",
-    link: "https://github.com/hungnbdev/realtime-chat-app",
-    url: chatty,
-    tags: ["Next.js", "Socket.io", "Tailwind"],
+    tags: [
+      "NestJS",
+      "Next.js",
+      "GraphQL",
+      "Prisma",
+      "SocketIO",
+      "Docker",
+      "AWS",
+      "CI/CD",
+    ],
   },
 ];
 
@@ -85,14 +128,19 @@ const Projects = () => {
           {projects.map((project) => (
             <SwiperSlide key={project.name}>
               <div className="bg-black/60 rounded-xl p-6 shadow border border-gray-800 flex flex-col gap-3 group hover:scale-[1.03] transition-transform h-[450px]">
-                <div className="w-full h-48 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center">
+                <div
+                  className="w-full h-48 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center"
+                  onClick={() => {
+                    window.open(project.link, "_blank");
+                  }}
+                >
                   <BlurFade>
                     <Image
                       src={project.url}
                       alt={project.name}
                       width={320}
                       height={160}
-                      className="object-cover w-full h-48"
+                      className="object-cover w-full h-48 cursor-pointer"
                     />
                   </BlurFade>
                 </div>
@@ -114,7 +162,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 rounded bg-gradient-to-r from-purple-700 to-indigo-700 text-xs text-white font-mono"
+                      className="px-2 py-0.5 rounded text-xs text-white font-medium"
                     >
                       {tag}
                     </span>

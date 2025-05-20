@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 
 const timeline = [
   {
+    year: "7/2024 - Now",
+    company: "Freelance",
+    role: "Fullstack Developer",
+    description:
+      "Worked as a freelancer on an Australian project, with experience collaborating with Australian clients, providing solutions and technologies related to the web.",
+    color: "from-purple-500 to-indigo-500",
+  },
+  {
     year: "3/2024 - Now",
     company: "Avada Group",
     role: "Fullstack Developer",
@@ -11,35 +19,19 @@ const timeline = [
     color: "from-purple-500 to-indigo-500",
   },
   {
-    year: "6/2023 - 3/2024",
+    year: "3/2023 - 3/2024",
     company: "EMSO Vietnam JSC",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     description:
-      "EMSO SOCIAL NETWORK: Social networking site for Vietnamese people (chat, livestream, e-commerce, investment, etc.). Tech: ReactJS, Redux, Redux Saga, Material UI, Firebase, Typescript, SocketIO. Role: Maintain marketplace module, integrate payments.",
+      "EMSO is the owner of Easy Edu, the most widely used Education and Training Management Platform in Vietnam!",
     color: "from-purple-500 to-indigo-500",
   },
   {
-    year: "3/2023 - Now",
-    company: "EASYEDU",
-    role: "Frontend Developer",
-    description:
-      "Management solutions for foreign language centers (microservice architecture). Tech: Drupal (backend), ReactJS (frontend), Firebase, Github, Axios, Redux, Material UI. Role: Develop new features, UI/UX, fix bugs.",
-    color: "from-pink-500 to-purple-500",
-  },
-  {
-    year: "12/2023 - Now",
-    company: "Personal Project: Whale Social Network",
+    year: "3/2022 - 3/2023",
+    company: "CSsoft JSC",
     role: "Fullstack Developer",
     description:
-      "Livestream and social network app (NestJS, GraphQL, Prisma, Docker, NextJS, Typescript, Zustand, Shadcn, SocketIO). Role: Fullstack, repo: github.com/nbhung278/Whale-SN-Client & Whale-SN-Server.",
-    color: "from-indigo-500 to-blue-500",
-  },
-  {
-    year: "11/2022 - 3/2023",
-    company: "CSSOFT JSC",
-    role: "Backend/Frontend Developer",
-    description:
-      "VIETTRADE HOMEPAGE: Software for Trade Promotion Department. ITRACE 247: Product information retrieval software. MOLISA: Feedback and recommendations software for Ministry of Labor. Tech: Bootstrap, Ajax, jQuery, Laravel 8.x. Role: Develop features, fix bugs, test projects.",
+      "CSsoft is a company with many years of collaboration with clients from Japan, the US, and the EU. With a team of experts boasting over 10 years of experience, we are committed to helping our clients solve problems with high quality, low cost, and fast turnaround.",
     color: "from-green-500 to-blue-500",
   },
 ];

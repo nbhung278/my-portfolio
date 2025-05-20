@@ -13,22 +13,23 @@ const Contact = () => {
     >
       <Image
         src="/next.svg"
-        alt="Vite Logo"
+        alt="Next.js Logo"
         width={60}
         height={60}
         className="mb-4"
       />
       <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
-        Start building with Hung Nguyen
+        Let&apos;s Create Something Amazing Together
       </h2>
       <p className="text-gray-400 mb-6 text-center max-w-md">
-        Contact me to build amazing web products together!
+        Ready to transform your ideas into reality? I&apos;m here to help you
+        build innovative web solutions that make a difference.
       </p>
       <a
         href="mailto:nbhung278@gmail.com"
         className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold shadow hover:scale-105 transition-transform"
       >
-        Contact Now
+        Get in Touch
       </a>
     </motion.div>
   );

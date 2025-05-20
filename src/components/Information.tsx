@@ -13,13 +13,18 @@ const Information = () => {
         <TypingAnimation className="text-xl md:text-2xl text-gray-300 mb-8">
           Fullstack Developer
         </TypingAnimation>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          I&apos;m a web developer with more than 3 years of experience (1.5
-          years Backend - Laravel, 2+ years Frontend - ReactJS). Good knowledge
-          of Architecture Design, UX/UI, and Design Patterns. Participated in
-          many projects, continuously improving my skills. Looking forward to
-          meeting enthusiastic mentors. My goal is to become a full-stack
-          website developer.
+        <p className="text-gray-400 max-w-6xl mx-auto text-justify">
+          I am a web developer with over 3 years of experience, including 1.5
+          years in backend development using Laravel and more than 2 years
+          specializing in frontend development with ReactJS. I have a solid
+          understanding of architecture design, UX/UI principles, and software
+          design patterns. My hands-on experience spans both frontend and
+          backend technologies such as Next.js, NestJS, Docker, Redis, and
+          Pub/Sub—enabling me to build scalable, high-performance, and
+          maintainable systems. Additionally, I leverage cloud services like
+          Firebase and AWS, implement CI/CD pipelines, and design serverless
+          architectures to deliver secure and efficient cloud-native
+          applications.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
           <a

@@ -28,7 +28,7 @@ const technologies = [
   {
     icon: SiReact,
     color: "#61dafb",
-    name: "ReactJS",
+    name: "React",
     link: "https://react.dev/",
   },
   {

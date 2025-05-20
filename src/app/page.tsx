@@ -23,19 +23,35 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import easyEdu from "@/assets/images/easyEdu.png";
+import emsoSocial from "@/assets/images/emsoSocial.png";
+import chatty from "@/assets/images/chatty.webp";
+import insida from "@/assets/images/insida.webp";
+import landing from "@/assets/images/landing.avif";
+import whale from "@/assets/images/save-sea-whales-banner-paper-cut-whale-silhouette-with-underwater-landscape-vector-eco-poster-undersea-environment-sealife-ecosystem-protection-poster-save-sea-whales-papercut-layers_8071-55568.avif";
 
 const projects = [
+	{
+		name: "Insida app",
+		description:
+			"Official website for the Trade Promotion Department of the Ministry of Industry and Trade. Developed and maintained features using Bootstrap, Ajax, jQuery, and Laravel.",
+		link: "https://viettrade.gov.vn/",
+		url: insida,
+		tags: ["NextJS", "TailwindCSS", "Shadcn"],
+	},
 	{
 		name: "EMSO Social Network",
 		description:
 			"A social networking platform for Vietnamese users, featuring chat, livestream, e-commerce, investment, and more. Developed marketplace modules, integrated payment systems, and maintained frontend using ReactJS, Redux, Material UI, and Firebase.",
 		link: "https://cmc-fe.emso.vn/",
+		url: emsoSocial,
 		tags: ["ReactJS", "Redux", "Material UI", "Firebase", "SocketIO"],
 	},
 	{
 		name: "EasyEdu Management System",
 		description:
 			"A comprehensive management solution for foreign language centers, built with a microservice architecture. Responsible for developing new features, improving UI/UX, and fixing bugs. Tech stack includes ReactJS, Redux, Firebase, and Material UI.",
+		url: easyEdu,
 		link: "https://easyedu.vn/",
 		tags: ["ReactJS", "Redux", "Firebase", "Material UI"],
 	},
@@ -44,42 +60,15 @@ const projects = [
 		description:
 			"A livestream and social network app inspired by modern social platforms. Fullstack development using NestJS, GraphQL, Prisma, Docker, NextJS, Zustand, and SocketIO. Includes real-time features and code management via Github.",
 		link: "https://github.com/nbhung278/Whale-SN-Client",
+		url: whale,
 		tags: ["NestJS", "NextJS", "GraphQL", "Prisma", "SocketIO"],
-	},
-	{
-		name: "Viettrade Homepage",
-		description:
-			"Official website for the Trade Promotion Department of the Ministry of Industry and Trade. Developed and maintained features using Bootstrap, Ajax, jQuery, and Laravel.",
-		link: "https://viettrade.gov.vn/",
-		tags: ["Laravel", "Bootstrap", "jQuery"],
-	},
-	{
-		name: "iTrace 247",
-		description:
-			"A platform for retrieving product information, including origin, certification, and traceability. Contributed to both backend and frontend development, focusing on customer-requested features and bug fixes.",
-		link: "https://itrace247.com/",
-		tags: ["Laravel", "Bootstrap", "jQuery"],
-	},
-	{
-		name: "MOLISA Feedback System",
-		description:
-			"A feedback and recommendation system for the Ministry of Labor, War Invalids, and Social Affairs. Developed backend features and maintained the system using Laravel and Bootstrap.",
-		link: "https://www.molisa.gov.vn/",
-		tags: ["Laravel", "Bootstrap", "jQuery"],
-	},
-	// Showcase portfolio and animation projects as well
-	{
-		name: "Vite Portfolio Clone",
-		description:
-			"A portfolio website inspired by Vite, built with Next.js, Tailwind CSS, and Framer Motion for smooth animations.",
-		link: "https://github.com/hungnbdev/vite-portfolio-clone",
-		tags: ["Next.js", "Tailwind", "Framer Motion"],
 	},
 	{
 		name: "Realtime Chat App",
 		description:
 			"A real-time chat application using Socket.io, Next.js, and Tailwind CSS.",
 		link: "https://github.com/hungnbdev/realtime-chat-app",
+		url: chatty,
 		tags: ["Next.js", "Socket.io", "Tailwind"],
 	},
 	{
@@ -87,6 +76,7 @@ const projects = [
 		description:
 			"A landing page featuring beautiful and modern animation effects.",
 		link: "https://github.com/hungnbdev/landing-animations",
+		url: landing,
 		tags: ["React", "Framer Motion", "UI"],
 	},
 ];
@@ -243,17 +233,17 @@ const sections = [
 					>
 						{projects.map((project) => (
 							<SwiperSlide key={project.name}>
-								<div className="bg-black/60 rounded-xl p-6 shadow border border-gray-800 flex flex-col gap-3 group hover:scale-[1.03] transition-transform max-w-xl mx-auto min-h-[370px] h-[370px] md:min-h-[400px] md:h-[400px]">
-									<div className="w-full h-40 mb-3 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center">
+								<div className="bg-black/60 rounded-xl p-6 shadow border border-gray-800 flex flex-col gap-3 group hover:scale-[1.03] transition-transform h-[450px]">
+									<div className="w-full h-48 rounded-lg overflow-hidden bg-gray-800 flex items-center justify-center">
 										<Image
-											src="/project-placeholder.png"
+											src={project.url}
 											alt={project.name}
 											width={320}
 											height={160}
-											className="object-cover w-full h-full"
+											className="object-cover w-full h-48"
 										/>
 									</div>
-									<div className="flex items-center gap-2 mb-2">
+									<div className="flex items-center gap-2">
 										<span className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 block" />
 										<a
 											href={project.link}
@@ -264,7 +254,7 @@ const sections = [
 											{project.name}
 										</a>
 									</div>
-									<p className="text-gray-300 text-sm mb-2 line-clamp-4">
+									<p className="text-gray-300 text-sm line-clamp-3">
 										{project.description}
 									</p>
 									<div className="flex flex-wrap gap-2 mt-auto">

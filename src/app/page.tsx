@@ -110,7 +110,7 @@ export default function Home() {
       <header className="w-full flex items-center justify-between px-4 py-4 md:px-12 z-20 relative">
         <div className="flex items-center gap-2">
           <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
-            Hung Nguyen
+            Portfolio
           </span>
         </div>
         <div className="flex items-center gap-6">

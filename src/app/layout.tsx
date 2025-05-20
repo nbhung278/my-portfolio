@@ -6,12 +6,16 @@ const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
   variable: "--font-fira-code",
   display: "swap",
+  preload: true,
+  fallback: ["monospace"],
 });
 
 export const metadata: Metadata = {
@@ -42,6 +46,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/outfit.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${outfit.variable} ${firaCode.variable} antialiased`}>
         {children}
       </body>

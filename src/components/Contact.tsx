@@ -25,7 +25,7 @@ const Contact = () => {
         Contact me to build amazing web products together!
       </p>
       <a
-        href="mailto:hungnbdev@gmail.com"
+        href="mailto:nbhung278@gmail.com"
         className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold shadow hover:scale-105 transition-transform"
       >
         Contact Now

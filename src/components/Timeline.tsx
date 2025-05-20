@@ -3,7 +3,15 @@ import { motion } from "framer-motion";
 
 const timeline = [
   {
-    year: "6/2023 - Now",
+    year: "3/2024 - Now",
+    company: "Avada Group",
+    role: "Fullstack Developer",
+    description:
+      "Contributed to the development of a messaging support software for customers on the Shopify platform, with Facebook integration. Integrating AI for the chat feature helps customers ask questions and search for products that meet their needs.",
+    color: "from-purple-500 to-indigo-500",
+  },
+  {
+    year: "6/2023 - 3/2024",
     company: "EMSO Vietnam JSC",
     role: "Frontend Developer",
     description:
@@ -38,8 +46,7 @@ const timeline = [
 
 const Timeline = () => {
   return (
-    <div>
-      {" "}
+    <>
       <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
         Timeline
       </h2>
@@ -73,7 +80,7 @@ const Timeline = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -29,19 +29,20 @@ const projects = [
 	{
 		name: "Vite Portfolio Clone",
 		description:
-			"Portfolio lấy cảm hứng từ Vite, Next.js, Tailwind, Framer Motion.",
+			"Portfolio inspired by Vite, Next.js, Tailwind, and Framer Motion.",
 		link: "https://github.com/hungnbdev/vite-portfolio-clone",
 		tags: ["Next.js", "Tailwind", "Framer Motion"],
 	},
 	{
 		name: "Realtime Chat App",
-		description: "Ứng dụng chat realtime với socket.io, Next.js, Tailwind.",
+		description:
+			"Real-time chat application with socket.io, Next.js, and Tailwind.",
 		link: "https://github.com/hungnbdev/realtime-chat-app",
 		tags: ["Next.js", "Socket.io", "Tailwind"],
 	},
 	{
 		name: "Landing Page Animations",
-		description: "Trang landing page với hiệu ứng động đẹp mắt.",
+		description: "Landing page with beautiful dynamic effects.",
 		link: "https://github.com/hungnbdev/landing-animations",
 		tags: ["React", "Framer Motion", "UI"],
 	},
@@ -49,11 +50,11 @@ const projects = [
 
 const timeline = [
 	{
-		year: "2024 - nay",
+		year: "2024 - Present",
 		company: "Awesome Tech",
 		role: "Frontend Engineer",
 		description:
-			"Phát triển UI/UX cho các sản phẩm SaaS, tối ưu hiệu năng và trải nghiệm người dùng.",
+			"Developing UI/UX for SaaS products, optimizing performance and user experience.",
 		color: "from-purple-500 to-indigo-500",
 	},
 	{
@@ -61,7 +62,7 @@ const timeline = [
 		company: "Creative Studio",
 		role: "Web Developer",
 		description:
-			"Thiết kế và xây dựng website cho khách hàng doanh nghiệp, sử dụng Next.js và Tailwind.",
+			"Designing and building websites for business clients using Next.js and Tailwind.",
 		color: "from-pink-500 to-purple-500",
 	},
 	{
@@ -69,7 +70,7 @@ const timeline = [
 		company: "Startup XYZ",
 		role: "Frontend Intern",
 		description:
-			"Tham gia phát triển các dự án startup, học hỏi về React và quy trình Agile.",
+			"Participated in startup project development, learning about React and Agile processes.",
 		color: "from-indigo-500 to-blue-500",
 	},
 ];
@@ -110,25 +111,26 @@ const sections = [
 					transition={{ duration: 0.8 }}
 					className="mb-6"
 				>
-					<span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-purple-700 to-indigo-700 text-white text-xs font-semibold mb-4 shadow-lg">
-						Portfolio 2024
-					</span>
 					<h1 className="text-4xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-white via-purple-300 to-indigo-400 bg-clip-text text-transparent">
-						The Build Tool
-						<br />
-						for the Web
+						Full Stack Developer
 					</h1>
-					<p className="text-lg md:text-xl text-gray-400 max-w-xl mx-auto mb-8">
-						Tôi là Hung Nguyen, một lập trình viên frontend đam mê xây dựng web
-						hiện đại, nhanh và đẹp. Đây là portfolio cá nhân lấy cảm hứng từ
-						Vite.
+					<p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+						I&apos;m a Full Stack Developer with over 3 years of experience,
+						including 1.5 years in Backend Development (Laravel) and 2+ years in
+						Frontend Development (ReactJS). I possess strong expertise in
+						Architecture Design, UX/UI, and Design Patterns. Throughout my
+						career, I have actively contributed to numerous projects,
+						continuously enhancing my skills and professional growth. I am
+						passionate about learning and eager to collaborate with experienced
+						mentors who can help me further develop my expertise. My goal is to
+						become an exceptional full-stack web developer.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<a
 							href="#projects"
 							className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold shadow hover:scale-105 transition-transform"
 						>
-							Xem dự án
+							View Projects
 						</a>
 						<a
 							href="https://github.com/hungnbdev"
@@ -315,8 +317,8 @@ const sections = [
 							className="bg-black/60 rounded-xl p-6 shadow border border-gray-800"
 						>
 							<p className="text-gray-300 mb-4">
-								&quot;Hung là một dev rất nhiệt huyết, sản phẩm của bạn ấy luôn
-								chỉn chu và sáng tạo.&quot;
+								&quot;Hung is a very enthusiastic developer, his products are
+								always polished and creative.&quot;
 							</p>
 							<div className="flex items-center gap-3">
 								<div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-700 to-indigo-700" />
@@ -356,13 +358,13 @@ const sections = [
 						Start building with Hung Nguyen
 					</h2>
 					<p className="text-gray-400 mb-6 text-center max-w-md">
-						Hãy liên hệ với tôi để cùng xây dựng những sản phẩm web tuyệt vời!
+						Contact me to build amazing web products together!
 					</p>
 					<a
 						href="mailto:hungnbdev@gmail.com"
 						className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold shadow hover:scale-105 transition-transform"
 					>
-						Liên hệ ngay
+						Contact Now
 					</a>
 				</motion.div>
 			</SectionInView>
@@ -399,7 +401,6 @@ export default function Home() {
 		<div className="bg-gradient-to-b from-[#1a1333] via-[#18122b] to-[#0a0a0a] min-h-screen w-full text-white font-sans scroll-smooth">
 			<header className="w-full flex items-center justify-between px-4 py-4 md:px-12 z-20 relative">
 				<div className="flex items-center gap-2">
-					<Image src="/next.svg" alt="Logo" width={36} height={36} />
 					<span className="font-bold text-lg tracking-tight bg-gradient-to-r from-purple-300 to-indigo-400 bg-clip-text text-transparent">
 						Hung Nguyen
 					</span>
